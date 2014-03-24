@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{{test}}
+
+<form action="{% url 'downloadApp:get_link' %}" method="post">
+    {%csrf_token%}
+    <input type="text" id="url_string_id" name="url_string"/>
+
+    <input type="radio" name="choice" id="vkId" value="Download vkontakte"/><br/>
+    <input type="radio" name="choice" id="coubId" value="Download coub"/><br/>
+    <input type="radio" name="choice" id="youtubeId" value="Download youtube"/><br/>
+
+    <input type="submit" value="get link"/>
+
+</form>
+</body>
+</html>

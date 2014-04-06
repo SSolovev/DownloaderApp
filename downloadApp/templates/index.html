@@ -6,13 +6,27 @@
 <body>
 {{test}}
 
-<form action="{% url 'downloadApp:get_link' %}" method="post">
+<form action="{% url 'downloadApp:index' %}" method="post">
     {%csrf_token%}
     <input type="text" id="url_string_id" name="url_string"/>
 
-    <input type="radio" name="choice" id="vkId" value="Download vkontakte"/><br/>
-    <input type="radio" name="choice" id="coubId" value="Download coub"/><br/>
-    <input type="radio" name="choice" id="youtubeId" value="Download youtube"/><br/>
+    <ul>
+        <li>
+            <input type="radio" name="choice" id="vkId" value="Download vkontakte"/>
+            <label for="vkId">Download vkontakte</label>
+        </li>
+
+        <li>
+            <input type="radio" name="choice" id="youtubeId" value="Download youtube"/>
+            <label for="youtubeId">Download youtube</label>
+        </li>
+        <li>
+            <input type="radio" name="choice" id="coubId" value="Download coub"/>
+            <label for="coubId">Download coub</label>
+        </li>
+    </ul>
+
+
 
     <input type="submit" value="get link"/>
 

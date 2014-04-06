@@ -7,3 +7,4 @@ urlpatterns = patterns('',
                        url('^$', views.index, name='index'),
                        url('^result_link/$', views.get_link, name='get_link'),)
 
+handler404 = 'downloadApp.views.error404'

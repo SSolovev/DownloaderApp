@@ -31,5 +31,15 @@
     <input type="submit" value="get link"/>
 
 </form>
+
+<div>
+    {%for e in list %}
+    Already downloaded:</br>
+    url : {{e.downloaded_url}}</br>
+    ip address: {{e.requester_ip}}</br>
+    date: {{e.request_date}}</br>
+    {% endfor %}
+
+</div>
 </body>
 </html>
